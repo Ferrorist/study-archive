@@ -1,6 +1,17 @@
 # 1주차 학습 목표
 
-## 2025.11.24. (월) - Python 문법 감 회복
+## Index
+* [2025.11.24. - Python 문법 감 회복](#day-2025-11-24-python)
+  * [List/Dict Comprehensions](./1week.md/#listdict-comprehensions)
+  * [lambda 함수](./1week.md/#lambda-함수)
+  * [enumerate](./1week.md/#enumerate)
+  * [zip](./1week.md/#zip)
+* [2025.11.25. - Numpy 기본](#day-2025-11-25-numpy)
+
+<br><br>
+
+<a id="day-2025-11-24-python"></a>
+## 2025.11.24. - Python 문법 감 회복
 
 
 ### List/Dict Comprehensions
@@ -191,3 +202,8 @@ for idx, (name, age) in enumerate(zip(names, ages)):
 ```
 zip 함수는 Iterator를 반환하므로 enumerate와 조합할 수 있는 것이며,<br>
 필요에 따라 list()나 dict()로 변환하여 사용할 수 있습니다.
+
+<br><br>
+
+<a id="day-2025-11-25-numpy"></a>
+## 2025.11.25. (화) - Numpy 기본
