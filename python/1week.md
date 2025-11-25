@@ -134,7 +134,7 @@ for i, f in enumerate(fruits):
 <br>
 
 ### zip
-- zip 함수는 두 개 이상의 리스트를 동시에 순회하고 싶을 때 사용합니다.<br>
+- zip 함수는 **두 개 이상의 리스트를 동시에 순회**하고 싶을 때 사용합니다.<br>
 기본 형태는 아래와 같습니다.
 ```python
 for a, b in zip(list1, list2):
@@ -145,3 +145,49 @@ for a, b in zip(list1, list2):
 for a, b, c in zip(list1, list2, list3):
     # a, b, c를 사용한 코드
 ```
+
+예시 1) 두 리스트 병렬 처리
+```python
+names = ["Tom", "Amy", "John"]
+ages = [20, 25, 22]
+
+for n, a in zip(names, ages):
+    print(f"{n} is {a} years old.")
+```
+<br>
+
+예시 2) 세 리스트 병렬 처리
+```python
+names = ["Tom", "Amy", "John"]
+ages = [20, 25, 22]
+heights = [175, 160, 180]
+
+for n, a, h in zip(names, ages, heights):
+    print(f"{n} is {a} years old and {h} cm tall.")
+```
+
+<br>
+
+예시 3) zip으로 딕셔너리 만들기
+```python
+keys = ['name', 'age', 'city']
+values = ['Alice', 30, 'New York']
+
+result = {k: v for k, v in zip(keys, values)}
+
+result2 = dict(zip(keys, values))
+```
+
+
+<br>
+
+예시 4) enumerate와 zip 조합
+```python
+names = ["Tom", "Amy", "John"]
+ages = [20, 25, 22]
+
+for idx, (name, age) in enumerate(zip(names, ages)):
+    print(f"{idx}: {name} is {age} years old.")
+```
+zip 함수는 Iterator를 반환하므로 enumerate와 조합할 수 있는 것이며,<br>
+필요에 따라 list()나 dict()로 변환하여 사용할 수 있습니다.
