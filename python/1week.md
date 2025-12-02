@@ -379,3 +379,157 @@ mat.sum(axis=1)  # [6, 15] - 각 행의 합
 <a id="day-2025-11-27-pandas"></a>
 ## 2025.11.27. - Pandas
 
+### DataFrame
+Pandas의 DataFrame은 **2차원 Numpy 배열(ndarray) + 인덱스 + 컬럼 레이블**의 결합체이다.
+
+즉, 내부적으로는 이렇게 생긴 구조다.
+
+```pgsql
+            Columns
+         name   age   score
+Index -------------------------
+   0   |  A   | 20   |  85   |
+   1   |  B   | 25   |  90   |
+   2   |  C   | 30   |  88   |
+```
+
+### DataFrame의 구성 요소
+1. index: 행 번호 (기본 0, 1, 2, ... / 직접 지정 가능)
+2. columns: 컬럼명이 문자열로 존재함.
+3. values: 내부의 실제 데이터 (Numpy 배열)
+
+### DataFrame 생성
+```python
+import pandas as pd
+
+df = pd.DataFrame({
+    "name": ["A", "B", "C"],
+    "age": [20, 25, 30],
+    "score": [85, 90, 88]    
+})
+```
+
+df.values는 ndarray이다.
+```python
+df.values       #   array(['A', 20, 85], ['B', 25, 90], ...)
+df.index        #   RangeIndex(start=0, stop=3, step=1)
+df.columns      #   Index(['name', 'age', 'score'])
+```
+
+### head(), info(), describe()
+이는 EDA 3개 기초 함수이며, 어떤 csv든 로딩하면 무조건 처음에 실행하는 함수라 보면 된다.
+
+* `head()` : 가장 빠르게 데이터 상태를 볼 수 있는 창
+```python
+df.head()
+df.head(3)
+```
+
+head로 확인하는 5가지 요소
+1. 컬럼 이름
+2. 데이터 타입 추정
+3. 이상한 값
+4. 전체 데이터 구조 대략 파악
+5. 결측치가 대략 어디에 몰려있는지
+
+
+* `info()` : 구조, 타입, 결측치, 메모리까지 한 번에
+```python
+df.info()
+```
+
+출력 예시는 아래처럼 나온다.
+```vbnet
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 891 entries
+Columns: 12 entries
+dtypes:
+ Age       float64
+ Fare      float64
+ Name      object
+ ...
+```
+info()로 반드시 파악해야 하는 포인트
+* 각 컬럼의 데이터 타입(dtype)
+    * object → 문자열
+    * float → 실수
+    * int → 정수
+    * category → 범주형
+* null 값이 있는 컬럼
+* 전체 행 개수, 전체 열 개수
+* 메모리 사용량
+
+<br>
+
+* `describe()` : 수치형 통계 자동 요약
+```python
+df.describe()
+df.describe(include='all') # 문자열 포함 전체 통계
+```
+
+### 컬럼 선택
+Pandas는 내부적으로 단일 컬럼을 선택하면 `Series` 객체, 여러 컬럼 선택 시 `DataFrame` 객체가 된다.
+
+#### 단일 컬럼 (Series)
+```python
+df["age"]
+df["age"].mean()
+df["age"].max()
+```
+
+#### 여러 컬럼 선택 (DataFrame)
+```python
+df[["name", "score"]]
+```
+
+#### 새로운 컬럼 생성
+```python
+df["is_adult"] = df["age"] >= 20
+```
+
+#### 컬럼 삭제 및 컬럼명 변경
+```python
+df = df.drop("score", axis=1)
+df.rename(columns={"age", "AGE"}, inplace=True)
+```
+
+<br><br>
+
+### 조건 Filtering
+
+* 기본 조건
+```python
+df[df["age"] > 20]
+```
+
+* 복수 조건 (AND / OR)
+<br>
+AND → `&` , OR → `|`
+```python
+df[(df["age"] >= 20) & (df["score"] <= 85)]
+df[(df["age"] < 23) | (df["score"] > 90)]
+```
+
+* 문자열 조건
+```python
+df[df["name"] == "A"]
+df[df["name"].str.contains("a", case=False)]
+df[df["name"].str.startswith("A")]
+df[df["name"].str.endswith("C")]
+```
+
+* 특정 조건에 대해 특정 컬럼만 선택 `df.loc()`
+```python
+# df.loc[행 조건, 열 선택]
+df.loc[df["score"] > 80, ["name", "score"]]
+```
+
+* 결측치 제거
+```python
+df[df["age"].notnull()]
+```
+
+* 범주형 선택
+```python
+df[df["Pclass"].isin([1, 2])]
+```
