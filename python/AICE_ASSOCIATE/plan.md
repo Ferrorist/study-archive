@@ -19,7 +19,7 @@
 
 ## 📅 **12/2 (화) — 이상치 처리 + Kaggle 실습**
 
-* [ ] Z-score 개념 이해
+* [x] Z-score 개념 이해
 * [ ] IQR 기반 이상치 탐지
 * [ ] boxplot으로 이상치 시각 확인
 * [ ] Kaggle Titanic/Housing에서 이상치 제거 실습
