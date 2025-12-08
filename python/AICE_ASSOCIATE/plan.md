@@ -28,13 +28,13 @@
 
 # ✅ **12/8 (일) — 결측치 처리 + groupby 기본**
 
-* [ ] 결측률 계산 (`df.isnull().sum() / len(df)`)
-* [ ] 결측치 처리 전략 3종(평균/최빈/삭제)
-* [ ] `fillna()` 실습
-* [ ] `dropna()` 실습
-* [ ] groupby 기본 문법 학습
-* [ ] `df.groupby("컬럼").size()`
-* [ ] `df.groupby("컬럼")["Value"].mean()`
+* [x] 결측률 계산 (`df.isnull().sum() / len(df)`)
+* [x] 결측치 처리 전략 3종(평균/최빈/삭제)
+* [x] `fillna()` 실습
+* [x] `dropna()` 실습
+* [x] groupby 기본 문법 학습
+* [x] `df.groupby("컬럼").size()`
+* [x] `df.groupby("컬럼")["Value"].mean()`
 
 ---
 
