@@ -40,11 +40,11 @@
 
 # ✅ **12/9 (월) — 범주형 처리 + groupby 심화 + sort_values**
 
-* [ ] `get_dummies()` 실습
-* [ ] Label Encoding 적용
-* [ ] groupby 다중 컬럼
-* [ ] `agg({"Fare": ["mean", "max", "min"]})`
-* [ ] `sort_values()` 오름/내림차순 실습
+* [x] `get_dummies()` 실습
+* [x] Label Encoding 적용
+* [x] groupby 다중 컬럼
+* [x] `agg({"Fare": ["mean", "max", "min"]})`
+* [x] `sort_values()` 오름/내림차순 실습
 
 ---
 
