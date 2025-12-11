@@ -38,7 +38,7 @@
 
 ---
 
-# ✅ **12/9 (월) — 범주형 처리 + groupby 심화 + sort_values**
+# ✅ **12/9 (화) — 범주형 처리 + groupby 심화 + sort_values**
 
 * [x] `get_dummies()` 실습
 * [x] Label Encoding 적용
@@ -48,17 +48,17 @@
 
 ---
 
-# ✅ **12/10 (화) — 시각화 핵심 + Titanic 그래프 3개**
+# ✅ **12/10 (수) — 시각화 핵심 + Titanic 그래프 3개**
 
-* [ ] `hist()`
-* [ ] `boxplot()`
-* [ ] `scatter()`
-* [ ] seaborn `pairplot()`
+* [x] `hist()`
+* [x] `boxplot()`
+* [x] `scatter()`
+* [x] seaborn `pairplot()`
 * [ ] Titanic에서 변수 2~3개 시각화
 
 ---
 
-# ✅ **12/11 (수) — Kaggle 실전 #1 (Titanic 전체 파이프라인)**
+# ✅ **12/11 (목) — Kaggle 실전 #1 (Titanic 전체 파이프라인)**
 
 * [ ] Kaggle Titanic 데이터 로딩
 * [ ] EDA: head/info/describe/null 확인
@@ -72,7 +72,7 @@
 
 ---
 
-# ✅ **12/12 (목) — Logistic vs SVC**
+# ✅ **12/12 (금) — Logistic vs SVC**
 
 * [ ] LogisticRegression 적용
 * [ ] SVC 적용
@@ -81,7 +81,7 @@
 
 ---
 
-# ✅ **12/13 (금) — EDA + groupby 기출 풀이**
+# ✅ **12/13 (토) — EDA + groupby 기출 풀이**
 
 * [ ] filtering 기출 문제 3~5개
 * [ ] groupby 기출 문제 2~4개
@@ -89,7 +89,7 @@
 
 ---
 
-# ✅ **12/14 (토 · 1.5~2h) — Kaggle 실전 #2**
+# ✅ **12/14 (일 · 1.5~2h) — Kaggle 실전 #2**
 
 추천 데이터: Heart Disease, Stroke Prediction, Mall Customers
 
@@ -102,7 +102,7 @@
 
 ---
 
-# ✅ **12/15 (일) — 2주차 핵심 정리**
+# ✅ **12/15 (월) — 2주차 핵심 정리**
 
 * [ ] 전처리 전략 요약
 * [ ] groupby / agg / sort_values 정리 1장
@@ -111,7 +111,7 @@
 
 ---
 
-# 🔥 **12/16 (월) — Pandas 집중 암기 + Filtering**
+# 🔥 **12/16 (화) — Pandas 집중 암기 + Filtering**
 
 * [ ] Pandas 핵심 함수 50개 중 필수 30개 암기
 * [ ] Filtering 문제 15~20개
@@ -119,7 +119,7 @@
 
 ---
 
-# 🔥 **12/17 (화) — 성능 지표 완전 정복**
+# 🔥 **12/17 (수) — 성능 지표 완전 정복**
 
 * [ ] Accuracy 계산
 * [ ] Precision / Recall / F1
@@ -128,7 +128,7 @@
 
 ---
 
-# 🔥 **12/18 (수) — 모의 실전 분석 #1 (40분 제한)**
+# 🔥 **12/18 (목) — 모의 실전 분석 #1 (40분 제한)**
 
 * [ ] CSV 로딩
 * [ ] EDA 10분
@@ -139,7 +139,7 @@
 
 ---
 
-# 🔥 **12/19 (목 · 시험 전날) — 전체 흐름 리허설**
+# 🔥 **12/19 (금 · 시험 전날) — 전체 흐름 리허설**
 
 * [ ] Titanic 전체 파이프라인 30분 컷
 * [ ] 함수/지표 최종 복습
@@ -148,7 +148,7 @@
 
 ---
 
-# 🏁 **12/20 (금 — 시험 당일)**
+# 🏁 **12/20 (토 — 시험 당일)**
 
 * [ ] 핵심 정리본 20~30분 가볍게 복습
 * [ ] groupby / filtering / 모델 지표만 다시 보고 시험장 이동
